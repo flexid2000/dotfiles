@@ -35,7 +35,7 @@ pre code {
   white-space: pre;
   overflow: auto; /* fixes issue #70: Firefox/Thunderbird: Code blocks with horizontal scroll would have bad background colour */
   border-radius: 3px;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   padding: 0.5em 0.7em;
   display: block;
 }
@@ -118,12 +118,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.6em;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #ccc;
 }
 
 h2 {
   font-size: 1.4em;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #ccc;
 }
 
 h3 {

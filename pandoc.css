@@ -4,12 +4,7 @@ html {
   overflow-x: initial !important;
 }
 body {
-  margin: 0 auto;
   max-width: 44em;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   hyphens: auto;
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
@@ -17,13 +12,19 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
 }
+@media all {
+    .page-break	{ display: none; }
+}
+@media print {
+    .page-break	{ display: block; page-break-after: always; }
+}
 @media (max-width: 600px) {
   body {
 font-size: 0.9em;
 padding: 12px;
   }
-  h1 {
-font-size: 1.6em;
+  h1, h2 {
+font-size: 1.2em;
   }
 }
 @media print {
@@ -36,8 +37,8 @@ color: black;
 font-size: 14pt;
   }
   p, h2, h3 {
-orphans: 3;
-widows: 3;
+orphans: 2;
+widows: 2;
   }
   h2, h3, h4 {
 page-break-after: avoid;
@@ -55,8 +56,15 @@ a:visited {
 img {
   max-width: 100%;
 }
+figure {
+  float: right;
+  margin: 0.5em;
+}
+figure figcaption {
+  display: none;
+}
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.4em;
+  margin-top: 1.2em;
 }
 h5, h6 {
   font-size: 1em;
@@ -104,41 +112,22 @@ hr {
   margin: 1em 0;
 }
 table {
-  margin: 1em 0;
-  border-collapse: collapse;
-  width: 100%;
-  overflow: auto;
-  break-inside: auto;
-  word-break: initial;
-  font-variant-numeric: lining-nums tabular-nums;
+    border-collapse: collapse;
+    width: 100%;
+    page-break-inside: avoid;
 }
-table caption {
-  margin-bottom: 0.75em;
+table, th, td {
+    border: 1px solid #ddd;
 }
-tbody {
-  margin-top: 0.5em;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+th, td {
+    padding: 5px;
+    text-align: left;
 }
-thead, tr { break-inside: avoid; break-after: auto; }
 th {
-  border-top: 1px solid #ddd;
-  background: #eeeeee;
-  border-color: #ddd;
-  border-style: solid;
-  border-width: 1px;
-  padding: 0.25em 0.5em 0.25em 0.5em;
+    text-align: left;
+    background-color: #eee;
 }
-table tr:nth-child(2n) {
-  background-color: rgba(245, 245, 245, .5);
-}
-td {
-  padding: 0.125em 0.5em 0.25em 0.5em;
-  border-color: #ddd;
-  border-style: solid;
-  border-width: 1px;
-  vertical-align: top;
-}
+tr:nth-child(even) {background-color: #fafafa}
 header {
   margin-bottom: 4em;
   text-align: center;

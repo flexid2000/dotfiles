@@ -1,0 +1,69 @@
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/Catppuccin-Mocha.toml"
+]
+
+[cursor]
+blink_interval = 500
+unfocused_hollow = true
+blink_timeout = 20
+thickness = 0.2
+
+  [cursor.style]
+  shape = "Block"
+  blinking = "On"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 11
+
+  [font.bold]
+  family = "Cousine"
+  style = "Bold"
+
+  [font.bold_italic]
+  family = "Cousine"
+  style = "Bold Italic"
+
+  [font.italic]
+  family = "Cousine"
+  style = "Italic"
+
+  [font.normal]
+  family = "Cousine"
+  style = "Regular"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Shift|Control"
+
+[scrolling]
+history = 10_000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+program = "/usr/bin/bash"
+
+[window]
+opacity = 1
+
+  [window.class]
+  general = "Alacritty"
+  instance = "Alacritty"
+
+  [window.dimensions]
+  columns = 100
+  lines = 25
+
+  [window.padding]
+  x = 10
+  y = 10
+
+  [window.position]
+  x = 480
+  y = 270
